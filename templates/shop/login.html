@@ -1,0 +1,57 @@
+{% extends 'shop/layouts/main.html' %}
+{% block title %}
+Register | online shopping
+        {% endblock title %}
+{% block content %}
+
+
+
+<div class="container  my-5 ">
+    <div class="row">
+        <div class="col-12">
+            
+<h1 class="mb-3"> User Login </h1>
+
+<hr style="border-color:rgb(67, 63, 63);">
+{% include 'shop/inc/message.html' %}
+        </div>
+    </div>
+    <section class="py-4 my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="mb-4">
+                            <label for="" class="form-label">
+                                User name
+                            </label>
+                            <input type="text" name="username" class="form-control" id="username" placeholder="username">
+                        </div>
+                        <div class="mb-4">
+                            <label for="" class="form-label">
+                                Password
+                            </label>
+<input type="password" name="password" id="" placeholder="Enter a password" class="form-control">
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Login                         </button>
+
+
+
+                    </form>
+                   
+                 
+                </div>
+                <div class="col-3">
+                    <a href="{% url 'admin:index' %}" class="btn btn-success">Admin login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+</div>
+
+{% endblock content %}
